@@ -7,7 +7,8 @@ function setup(options, imports, register) {
   var router = express.Router();
 
   router.get('/', function (req, res) {
-    res.json({home: 'home'});
+    res.render('home');
+    // res.json({home: 'home'});
   });
 
   return register(null, {
