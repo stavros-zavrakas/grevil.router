@@ -1,9 +1,13 @@
 var express = require('express');
 
-const consumes = [];
+const consumes = ['grevil.libs'];
 const provides = ['grevil.router'];
 
 function setup(options, imports, register) {
+  var libs = imports['grevil.libs'];
+  
+  libs.foo();
+
   var router = express.Router();
 
   router.get('/', function (req, res) {
